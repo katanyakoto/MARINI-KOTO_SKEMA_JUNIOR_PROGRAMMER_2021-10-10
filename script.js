@@ -4,10 +4,12 @@ console.log(numbers)
 numbers.forEach((number) => {
     console.log(number)
 
+   //mengaktifkan data input dan menampilkan hasil input
     number.addEventListener("click", () => {
         console.log("number is pressed")
     })
-
+    
+    // Mendefinisikan function updateScreen untuk mengupdate nilai
     number.addEventListener("click", (event) => {
         inputNumber(event.target.value)
         updateScreen(currentNumber)
@@ -20,6 +22,7 @@ const updateScreen =  (number) => {
     calculatorScreen.value = number
 }
 
+// mendefinisikan tiga variable untuk menyimpan 2 angka dan and 1 operator
 let prevNumber = ''
 let calculationOperator = ''
 let currentNumber = '0'
@@ -54,6 +57,7 @@ equalSign.addEventListener('click', () => {
     updateScreen(currentNumber)
 })
 
+//mendefinisikan empat fungsi kalkulasi dalam kalkulator
 const calculate = () => {
     let result = ''
     switch (calculationOperator) {
