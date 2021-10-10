@@ -104,6 +104,7 @@ percentageBtn.addEventListener('click', () => {
     updateScreen(currentNumber)
 })
 
+// karena persen merupakan per 100 maka currentNumber dibagi 100
 const percentage = () => {
     currentNumber = currentNumber / 100
 }
@@ -117,6 +118,7 @@ decimal.addEventListener('click', (event) => {
     updateScreen(currentNumber)
 })
 
+// input desimal agar titik desima muncul saat ditekan
 inputDecimal = (dot) => {
     if(currentNumber.includes('.')) {
         return
