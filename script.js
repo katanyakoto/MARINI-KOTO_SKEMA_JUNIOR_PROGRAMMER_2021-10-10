@@ -4,7 +4,7 @@ console.log(numbers)
 numbers.forEach((number) => {
     console.log(number)
 
-   //mengaktifkan data input dan menampilkan hasil input
+   //mengaktifkan data input dan menampilkan hasil input angka
     number.addEventListener("click", () => {
         console.log("number is pressed")
     })
@@ -57,7 +57,7 @@ equalSign.addEventListener('click', () => {
     updateScreen(currentNumber)
 })
 
-//mendefinisikan empat fungsi kalkulasi dalam kalkulator
+//mendefinisikan empat fungsi kalkulasi dalam kalkulator dan menambahkan parseFloat pada kalkulasi penambahan
 const calculate = () => {
     let result = ''
     switch (calculationOperator) {
@@ -79,6 +79,8 @@ const calculate = () => {
     currentNumber = result
     calculationOperator = ''
 }
+
+// mendefenisikan fungsi button AC untuk menghapus nilai
 const clearBtn = document.querySelector('.all-clear')
 
 clearBtn.addEventListener('click', () => {
@@ -93,6 +95,7 @@ const clearAll = () => {
     currentNumber = '0'
 }
 
+// mendefenisikan fungsi button persen
 const percentageBtn = document.querySelector('.percentage')
 
 percentageBtn.addEventListener('click', () => {
@@ -105,6 +108,7 @@ const percentage = () => {
     currentNumber = currentNumber / 100
 }
 
+// mendefenisikan fungsi button desimal
 const decimal = document.querySelector('.decimal')
 
 decimal.addEventListener('click', (event) => {
